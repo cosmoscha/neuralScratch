@@ -86,3 +86,4 @@ oh it gets deeper. what is a matrix product?
 
 its a matrix times matrix, to make a 3d matrix from the 2d one. Im not even going to type this one, you get the idea
 
+sometimes two matrix do not have compative dimensions. for example a 4 x 3 matrix and a 3 x 2 matrix. 4 != 3. so we need to transpose
