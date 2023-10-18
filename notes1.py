@@ -208,6 +208,33 @@ target_class = 0
 
 import math
 
-softmax_output = [0.7, 0.1, 0.2]
-target_output = [1, 0, 0]
+softmax_outputs = [[0.7, 0.1, 0.2],
+                  [0.1, 0.5, 0.4],
+                  [0.02, 0.9, 0.08]]
+class_targets = [0, 1, 1]
+
+#we want to get 0.7, 0.5, 0.9. because that is index 0, 1, and 1
+
+for targ_idx, distribution in zip(class_targets, softmax_outputs):
+    print(distribution[targ_idx])
+
+# it should give you 0.7, 0.5, 0.9
+# the above loop can be rewritten using numpy, likeso
+
+
+softmax_outputs = np.array([[0.7, 0.1, 0.2],
+                  [0.1, 0.5, 0.4],
+                  [0.02, 0.9, 0.08]])
+
+class_targets = [0, 1, 1]
+
+print(softmax_outputs[[0,1,2], class_targets])
+
+#much neater
+
+#and you can take it yet anothber step futher and do it like this
+
+print(-np.log(softmax_outputs[range(len(softmax_outputs)), class_targets]))
+
+#theres an issue though, bc negative log of 0 is infinite. cant have that
 
