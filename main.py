@@ -65,3 +65,4 @@ loss_function = Loss_CategoricalCrossEntropy()
 loss = loss_function.caluclate(activation2.output, y)
 
 print("Loss:", loss)
+

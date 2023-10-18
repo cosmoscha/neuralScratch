@@ -39,3 +39,9 @@ lets discuss what is a log function? generally it is 'solving for x'
 
 where e ** x = b
 
+#optimization
+
+you've calculated your inputs, know how to shape them, you know how to activate and refine, but you need to know how to adjust the weights and biases in realtime. Which is the final step, optimization.
+
+we dont want to make random combinations until something fits, that would take forever
+
